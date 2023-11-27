@@ -1,5 +1,7 @@
 # sample-python-app-lmt (Log-Metrics-Traces)
 
+GITHUB_TOKEN = "ghp_1234567890abcdef01234567890abcdef"
+
 ## App Endpoint
 http://localhost:5000/test
 
