@@ -16,8 +16,6 @@ app_name = 'Python User App for LMT'
 app = Flask('Python User App for LMT')
 api = Api(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url
-AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
-AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 
 db.init_app(app)
 
