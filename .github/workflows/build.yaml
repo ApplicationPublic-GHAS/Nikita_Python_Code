@@ -36,12 +36,6 @@ jobs:
       with:
         python-version: 3.11
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install coverage
-        if  [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
     - name: Run Snyk to check for vulnerabilities
       uses: snyk/actions/python@master
       continue-on-error: true # To make sure that SARIF upload gets called
@@ -53,6 +47,12 @@ jobs:
       uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: snyk.sarif
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install coverage
+        if  [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Run Unit Tests and generate coverage report
       run: |
