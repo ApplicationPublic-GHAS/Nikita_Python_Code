@@ -1,6 +1,7 @@
 # sample-python-app-lmt (Log-Metrics-Traces)
 
 ## App Endpoint
+
 http://localhost:5000/test
 
 ## Test Counter metric on 

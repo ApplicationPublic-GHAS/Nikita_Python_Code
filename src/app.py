@@ -16,8 +16,6 @@ app_name = 'Python User App for LMT'
 app = Flask('Python User App for LMT')
 api = Api(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url
-AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
-AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 
 db.init_app(app)
 
@@ -172,4 +170,4 @@ api.add_resource(HealthCheck, '/health')
 from appmetrics.wsgi import AppMetricsMiddleware
 app.wsgi_app = AppMetricsMiddleware(app.wsgi_app)
 #app.run(host='0.0.0.0', debug=True)
-app.run(debug=True)
+app.run(debug=False)
