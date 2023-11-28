@@ -1,8 +1,5 @@
 # sample-python-app-lmt (Log-Metrics-Traces)
 
-nikita: "AKIAQP6DFOSSTCWC2G6L"
-niki: "v9848HfzoszT2nvcDNRfUU30P/n8R7R8oCkov+zQ"
-
 ## App Endpoint
 
 http://localhost:5000/test
