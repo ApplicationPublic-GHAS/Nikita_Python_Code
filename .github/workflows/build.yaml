@@ -75,5 +75,3 @@ jobs:
         IMAGE="${{ secrets.IMAGE_NAME }}:${GITHUB_SHA:0:7}"
         docker build --file Dockerfile -t $IMAGE .
         docker push $IMAGE
-
-    
