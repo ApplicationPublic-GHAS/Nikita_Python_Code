@@ -36,18 +36,6 @@ jobs:
       with:
         python-version: 3.11
 
-    - name: Run Snyk to check for vulnerabilities
-      uses: snyk/actions/python@master
-      continue-on-error: true # To make sure that SARIF upload gets called
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      with:
-        args: --sarif-file-output=snyk.sarif
-    - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: snyk.sarif
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -81,5 +69,11 @@ jobs:
         registry: '${{ secrets.REGION }}-docker.pkg.dev' #gcr.io' # or REGION-docker.pkg.dev
         username: 'oauth2accesstoken'
         password: '${{ steps.auth.outputs.access_token }}'
+
+    - name: 'Build and Push Docker Image'
+      run: |
+        IMAGE="${{ secrets.IMAGE_NAME }}:${GITHUB_SHA:0:7}"
+        docker build --build-arg APPLICATION_SECRET=$APPLICATION_SECRET -t $IMAGE .
+        docker push $IMAGE
 
     
