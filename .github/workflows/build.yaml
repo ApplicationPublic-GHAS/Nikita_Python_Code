@@ -13,7 +13,7 @@ env:
 
 # Define the jobs to run in this workflow  
 jobs:
-  setup-build-publish-deploy:
+  build:
   
     # Use a self-hosted runner  
     runs-on: ubuntu-latest
