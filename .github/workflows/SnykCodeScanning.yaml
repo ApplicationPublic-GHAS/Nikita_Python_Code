@@ -1,5 +1,9 @@
 name: Example workflow for Python using Snyk
 on: push
+permissions:
+    id-token: write
+    contents: write              # This is required for actions/checkout
+    security-events: write       # To upload sarif files
 jobs:
   security:
     runs-on: ubuntu-latest
