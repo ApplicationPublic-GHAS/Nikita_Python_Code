@@ -3,8 +3,8 @@ name: Build Python App image and push to GAR
 # Define the trigger for this workflow (runs on push to the develop branch)
 on:
   push:
-    branches:
-      - main
+    #branches:
+      #- main
 
       
 # Define environment variables      
