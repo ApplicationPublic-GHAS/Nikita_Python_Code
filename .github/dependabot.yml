@@ -5,7 +5,14 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # Enable version updates for python
+  - package-ecosystem: "pip"
+    directory: "/"
     schedule:
       interval: "daily"
+
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
