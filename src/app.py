@@ -169,5 +169,5 @@ api.add_resource(HealthCheck, '/health')
 
 from appmetrics.wsgi import AppMetricsMiddleware
 app.wsgi_app = AppMetricsMiddleware(app.wsgi_app)
-#app.run(host='0.0.0.0', debug=True)
-app.run(debug=False)
+app.run(host='0.0.0.0', debug=True)
+#app.run(debug=False)
