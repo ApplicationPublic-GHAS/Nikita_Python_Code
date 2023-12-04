@@ -1,7 +1,9 @@
 # sample-python-app-lmt (Log-Metrics-Traces)
 
-AWS_ACCESS_KEY_ID: "AKIAQP6DFOSSTCWC2G6L"
-AWS_SECRET_ACCESS_KEY: "v9848HfzoszT2nvcDNRfUU30P/n8R7R8oCkov+zQ"
+AWS_ACCESS_KEY_ID: "AKIAQORV2VLRGMZOJJNI"
+AWS_SECRET_ACCESS_KEY: "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"
+
+GITHUB_PAT: "ghp_kkjixium85JMUuJ3dvhczczVTNs7m90o0abc"
 
 ## App Endpoint
 
