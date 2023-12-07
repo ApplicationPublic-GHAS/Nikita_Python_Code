@@ -8,9 +8,9 @@ flask_marshmallow>=0.15.0
 flask-ext
 flask-mysql>=1.5.0
 marshmallow-sqlalchemy>=0.26.0
-opentelemetry-api>=1.0.0
-opentelemetry-sdk>=1.0.0
-opentelemetry-distro>=1.0.0
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-distro
 psycopg2-binary>=2.9.0
 flask_cors>=3.0.10
 Flask-Testing>=0.8.0
