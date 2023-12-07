@@ -1,5 +1,5 @@
 Flask>=2.0.0
-appmetrics>=1.2.0
+appmetrics
 prometheus_client>=0.11.0
 requests>=2.26.0
 flask_restful>=0.3.9
