@@ -12,6 +12,7 @@ from logging_config import logger
 from database import db, db_url
 
 
+flask_version_with_vulnerabilities = '0.12.2'
 app_name = 'Python User App for LMT'
 app = Flask('Python User App for LMT')
 api = Api(app)
@@ -160,6 +161,14 @@ def unhandled_exception(e):
     error_counter.inc()
     logger.error(f'Error  {e}')
     return jsonify(error=str(e)), 500
+
+@app.errorhandler(404)
+def not_found(e):
+    # note that we set the 404 status explicitly
+    c.labels('get', '/error').inc()
+    error_counter.inc()
+    logger.error(f'Error  {e}')
+    return jsonify(error=str(e)), 404
 
 api.add_resource(UserList, '/user/list')
 api.add_resource(UserAdd, '/user/add')
