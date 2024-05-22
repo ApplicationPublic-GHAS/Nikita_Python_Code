@@ -1,7 +1,7 @@
 Flask>=2.0.0
 appmetrics
 prometheus_client>=0.11.0
-requests>=2.26.0
+requests>=2.32.0
 flask_restful>=0.3.9
 flask_sqlalchemy>=2.6.0
 flask_marshmallow>=0.15.0
